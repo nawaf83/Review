@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/app":{"guestpath":"/home/vagrant/app","hostpath":"C:/Examples/Hello-world-java/build/libs","disabled":false,"__vagrantfile":true},"/home/vagrant/project":{"guestpath":"/home/vagrant/project","hostpath":"C:/Examples/Hello-world-java","disabled":false,"__vagrantfile":true}}}
