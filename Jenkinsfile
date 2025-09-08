@@ -6,15 +6,11 @@ pipeline {
                 git branch: 'master', url: 'https://github.com/nawaf83/Review.git'
             }
         }
-        stage('Build and Test') {
-            parallel {
-            stage('Build') {
-                steps { bat 'gradlew build' }
-            }
-            stage('Test') {
-                steps { bat 'gradlew test' }
-            }
-            }
+        stage('Build') {
+            steps { bat 'gradlew build'}
+        }
+        stage('Test') {
+            steps { bat 'gradlew test'} 
         }
         stage('Deploy') {
             steps { 
