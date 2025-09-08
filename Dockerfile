@@ -6,6 +6,5 @@ WORKDIR /app
 COPY build/libs/my-application-1.0.jar /app/my-application-1.0.jar
 
 
-
 # Set the JAR as the entrypoint
 ENTRYPOINT ["java", "-jar", "my-application-1.0.jar"]
