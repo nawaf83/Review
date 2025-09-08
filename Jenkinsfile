@@ -14,13 +14,13 @@ pipeline {
         }
         stage('Deploy') {
             steps { 
-                powershell 'docker build -t Deployment_env .'
+                powershell 'docker build -t deployment_env .'
 
             } 
         }
             stage('Production') {
             steps { 
-                powershell 'docker run Deployment_env'
+                powershell 'docker run deployment_env'
             }          
         }    
 }
