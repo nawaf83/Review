@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/nawaf83/review.git'
+                git branch: 'master', url: 'https://github.com/nawaf83/Review.git'
             }
         }
         stage('Build') {
@@ -17,6 +17,7 @@ pipeline {
                 powershell 'docker build -t Deployment_env .'
 
             } 
+        }
             stage('Production') {
             steps { 
                 powershell 'docker run Deployment_env'
