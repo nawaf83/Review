@@ -1,3 +1,4 @@
+// not allowed add comments as chenges on the code
 package com.example;
 
 public class Main {
@@ -6,6 +7,6 @@ public class Main {
     }
 
     public static String getGreeting() {
-        return "Hello, World!"; // not allowed
+        return "Hello, World!"; 
     }
 }
