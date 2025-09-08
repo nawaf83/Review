@@ -14,15 +14,7 @@ pipeline {
         }
         stage('Deploy') {
             steps { 
-                powershell '''
-                    if (docker images -q deployment_env) {
-                        Write-Host "deployment_env image exists. Removing..."
-                        docker rmi -f deployment_env
-                    } else {
-                        Write-Host "deployment_env image does not exist."
-                    }
-                    docker build -t deployment_env .
-                '''
+                powershell 'docker build -t deployment_env .'
 
             } 
         }
